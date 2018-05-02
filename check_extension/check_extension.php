@@ -25,6 +25,6 @@ else
 /******************************************************************************/
 
 /**
- * With the raw request file prensent in the current folder who can see an http
+ * With the raw request file present in the current folder who can see an http
  * request who send a php script and make believe to the server that is a PNG
  */
