@@ -1,5 +1,3 @@
-# Naive1
-
 With this naive1's upload file we can upload every fill that we want on the
 server. We can upload script file to take advantge of the server's permissions.
 
