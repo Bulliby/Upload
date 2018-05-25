@@ -12,6 +12,12 @@ if (!empty($_FILES['myfile']['error']))
 $uploaddir = '../uploads/';
 $uploadfile = $uploaddir . basename($_FILES['myfile']['name']);
 
+if (!preg_match("/\.(png|jpeg|jpg|gif)$/", basename($_FILES['myfile']['name'])))
+{
+    echo "Bad extension type" . PHP_EOL; 
+    die();
+}
+
 if (move_uploaded_file($_FILES['myfile']['tmp_name'], $uploadfile)) 
     echo "File is valid, and was successfully uploaded.\n";
 else
