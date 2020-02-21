@@ -3,7 +3,7 @@ In this example we get around the php's *mime_content_type()* function.
 
 \_ The server accept **GIF** images and use only the *mime_content_type()* function for verify that the image is valid. If we put **PHP** code in comment of the GIF, like php is a template language, with a php extension, the GIF will be executed.
 
-\_ For insert comment in GIF file we use the following command :
+\_ For insert comments in GIF file we use the following command :
 
 ``gifsicle < spmUM.gif -- comment "`cat exploit.php`" > output.php``
 
